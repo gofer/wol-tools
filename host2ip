@@ -1,0 +1,33 @@
+#!/bin/sh
+
+function usage()
+{
+    CMDNAME=`basename $1`
+    echo -e "[usage] ${CMDNAME} [hostname]" 1>&2
+    exit
+}
+
+HOST=""
+if [ $# -ge 1 ]; then
+    HOST=$1
+else
+    read HOST
+fi
+
+if [ `echo ${HOST} | wc -c` -eq 0 ]; then
+    usage $0
+    exit
+fi
+
+GREPRET=(`nslookup ${HOST} | egrep 'Address:' | sed -E 's/	/ /g' | sed -E 's/ ( +)/ /g' | cut -d ' ' -f 2`)
+
+if [ ${#GREPRET[@]} -le 1 ]; then
+    echo -e "Cannot find hostname \"${HOST}\"." 1>&2
+    exit
+fi
+
+n=`expr ${#GREPRET[@]} - 1`
+for i in `seq 1 $n`; do
+    echo -e "${GREPRET[$i]}"
+done
+

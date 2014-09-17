@@ -1,0 +1,6 @@
+wake_on_lan
+local.db
+old/
+tmp/
+*.out
+
