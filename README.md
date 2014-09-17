@@ -1,5 +1,5 @@
 # What's this?
-## Wake on LAN(WoL) tools in your character console.
+## Wake on LAN(WoL) tools in console.
 This makes the power management easy in your computer cluster.
 
 # How to use?
