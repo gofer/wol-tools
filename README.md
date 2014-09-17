@@ -16,6 +16,7 @@ This tool broadcasts UDP magic packet to the network segment.
 It needs target NIC's MAC address to build the magic packet.
 This tool estimates target MAC address in your local ARP cache or static local database.
 
+We strongly recommended to create local database in preparation for ARP cache expiration.
 File "local.db"; local database is as following format.
 
     [HOSTNAME] [IP ADDRESS] [MAC ADDRESS]
@@ -24,5 +25,5 @@ For instace,
 
     dev.your.local.domain 123.45.6.7 00:1a:2b:3c:4d:5e
 
-All columns have separated unary space ' '.
+All columns have separated by unary space ' '.
 
