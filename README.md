@@ -1,6 +1,6 @@
 # What's this?
 ## Wake on LAN(WoL) tools in your character console.
-Thess make the power management easy in your computer cluster.
+This makes the power management easy in your computer cluster.
 
 # How to use?
 * Clone this repository
