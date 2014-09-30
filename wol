@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 HOST2IP=host2ip
 IP2HOST=ip2host
