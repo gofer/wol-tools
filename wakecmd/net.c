@@ -39,15 +39,15 @@ magic_packet(buffer, buf_size, mac_addr)
     for(i=0; i<6; ++i)
     {
         (*buffer)[i] = 0xFF;
-    }
+    } /* for(0 <= i < 6) */
 
     for(j=0; j<16; ++j)
     {
         for(i=0; i<6; ++i)
         {
             (*buffer)[j*6+i+6] = (*mac_addr).addr[i];
-        }
-    }
+        } /* for(0 <= i < 6) */
+    } /* for(0 <= j < 16) */
 
     return 0;
 }
